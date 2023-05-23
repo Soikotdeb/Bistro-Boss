@@ -65,7 +65,7 @@ const Footer = () => {
     </div>
     <div className="p-4 footer-center bg-base-300 text-base-content">
     <div>
-        <p>&copy; {formattedDate} - All rights reserved by ACME Industries Ltd</p>
+        <p>&copy; {formattedDate} - All rights reserved by Bistro Boss Industries Ltd</p>
       </div>
     </div>
   </footer>
