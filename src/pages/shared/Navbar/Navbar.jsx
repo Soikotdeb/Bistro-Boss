@@ -18,7 +18,7 @@ const Navbar = () => {
         <Link to="/menu">OUR MENU</Link>
       </li>
       <li>
-        <Link>OUR SHOP</Link>
+        <Link to="/orderFood/salad">ORDER FOOD</Link>
       </li>
       <li>
         <a><FaShoppingCart size={32} color="white" /> </a>
