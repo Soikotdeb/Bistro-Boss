@@ -1,8 +1,18 @@
 
-import { FaShoppingCart } from 'react-icons/fa';
+import { useContext } from 'react';
+import { FaShoppingCart, FaSignOutAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../providers/AuthProvider';
 
 const Navbar = () => {
+  const {user ,logOut}=useContext(AuthContext)
+
+const handleLogOut = ()=>{
+logOut()
+.then(()=>{})
+.catch(error=>console.log(error))
+}
+
   const navoptions = (
     <>
       <li>
@@ -19,7 +29,17 @@ const Navbar = () => {
       </li>
       <li>
         <Link to="/orderFood/salad">ORDER FOOD</Link>
+      <li>
+        <Link to="/secret">SECRET</Link>
       </li>
+      </li>
+      <li>
+       
+      </li>
+      {
+
+         user ? <> <li><Link onClick={handleLogOut} className='flex  gap-1 items-center'>LOGOUT <span className='text-2xl'><FaSignOutAlt /></span></Link></li> </> :<> <li><Link to="/login">LOGIN</Link> </li> </>
+      }
       <li>
         <a><FaShoppingCart size={32} color="white" /> </a>
         
