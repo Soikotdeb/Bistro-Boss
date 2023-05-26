@@ -1,17 +1,16 @@
-
-import { useContext } from 'react';
-import { FaShoppingCart, FaSignOutAlt } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../../providers/AuthProvider';
+import { useContext } from "react";
+import { FaShoppingCart, FaSignOutAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../../../providers/AuthProvider";
 
 const Navbar = () => {
-  const {user ,logOut}=useContext(AuthContext)
+  const { user, logOut } = useContext(AuthContext);
 
-const handleLogOut = ()=>{
-logOut()
-.then(()=>{})
-.catch(error=>console.log(error))
-}
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
 
   const navoptions = (
     <>
@@ -29,20 +28,34 @@ logOut()
       </li>
       <li>
         <Link to="/orderFood/salad">ORDER FOOD</Link>
-      <li>
-        <Link to="/secret">SECRET</Link>
+        <li>
+          <Link to="/secret">SECRET</Link>
+        </li>
       </li>
-      </li>
+      <li></li>
+      {user ? (
+        <>
+          <li>
+            <Link onClick={handleLogOut} className="flex  gap-1 items-center">
+              LOGOUT
+              <span className="text-2xl">
+                <FaSignOutAlt />
+              </span>
+            </Link>
+          </li>
+        </>
+      ) : (
+        <>
+          {" "}
+          <li>
+            <Link to="/login">LOGIN</Link>
+          </li>
+        </>
+      )}
       <li>
-       
-      </li>
-      {
-
-         user ? <> <li><Link onClick={handleLogOut} className='flex  gap-1 items-center'>LOGOUT <span className='text-2xl'><FaSignOutAlt /></span></Link></li> </> :<> <li><Link to="/login">LOGIN</Link> </li> </>
-      }
-      <li>
-        <a><FaShoppingCart size={32} color="white" /> </a>
-        
+        <a>
+          <FaShoppingCart size={32} color="white" />{" "}
+        </a>
       </li>
     </>
   );
@@ -79,8 +92,8 @@ logOut()
             <a className="btn btn-ghost normal-case ">
               BISTRO <span className="text-orange-600">BOSS</span>
             </a>
-         
-          <p className="pl-3">R E S T A U R A N T </p>
+
+            <p className="pl-3">R E S T A U R A N T </p>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
