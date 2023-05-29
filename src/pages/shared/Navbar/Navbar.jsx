@@ -1,10 +1,14 @@
 import { useContext } from "react";
-import { FaShoppingCart, FaSignOutAlt } from "react-icons/fa";
+import { FaSignOutAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
+import carts from "../../../assets/icon/cart.png";
+import useCart from "../../../hooks/UseCart";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [cart]=useCart();
+
 
   const handleLogOut = () => {
     logOut()
@@ -31,6 +35,14 @@ const Navbar = () => {
         <li>
           <Link to="/secret">SECRET</Link>
         </li>
+        <li>
+          <Link to="/dashboard/myCart">
+            <button className="btn gap-1">
+              <img className="w-9 h-9 rounded" src={carts} alt="" />
+              <div className="badge badge-secondary">+{cart?.length || 0}</div>
+            </button>
+          </Link>
+        </li>
       </li>
       <li></li>
       {user ? (
@@ -52,11 +64,7 @@ const Navbar = () => {
           </li>
         </>
       )}
-      <li>
-        <a>
-          <FaShoppingCart size={32} color="white" />{" "}
-        </a>
-      </li>
+      <li></li>
     </>
   );
 
@@ -98,9 +106,6 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navoptions}</ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">SignIn</a>
         </div>
       </div>
     </>

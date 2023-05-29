@@ -97,6 +97,7 @@ const Login = () => {
                   </a>
                 </label>
               </div>
+
               <div className="form-control">
                 <label className="label">
                   <LoadCanvasTemplate />
@@ -111,6 +112,8 @@ const Login = () => {
               </div>
               <div className="form-control mt-6">
                 <input
+                // TODO CAPTCHA
+                
                   disabled={disable}
                   className="btn btn-primary"
                   type="submit"
