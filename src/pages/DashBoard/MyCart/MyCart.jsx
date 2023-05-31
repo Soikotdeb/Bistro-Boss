@@ -38,7 +38,7 @@ const handleDelete = item=>{
 }
 
   return (
-    <div className="w-full lg:mt-96">
+    <div className="w-full lg:mt-96 h-full">
       <Helmet>
         <title>Bistro Boss/MyCart</title>
       </Helmet>
