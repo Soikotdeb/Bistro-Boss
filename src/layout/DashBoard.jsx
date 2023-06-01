@@ -46,8 +46,8 @@ const [idAdmin]= useAdmin()
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
-            <FaUtensils></FaUtensils> Add Items
+            <NavLink to="/dashboard/addItem">
+            <FaUtensils></FaUtensils> Add An Items
             </NavLink>
           </li>
 

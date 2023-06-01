@@ -16,7 +16,7 @@ return <progress className="progress progress-secondary w-56" value="70" max="10
     if(user && isAdmin){
         return children
     }
-    return <Navigate to="/login" state={{from:location}} replace></Navigate>
+    return <Navigate to="/" state={{from:location}} replace></Navigate>
 };
 
 export default AdminRoute;
