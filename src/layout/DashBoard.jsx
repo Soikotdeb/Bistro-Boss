@@ -21,14 +21,14 @@ const [idAdmin]= useAdmin()
   return (
     <div className="drawer drawer-mobile ">
       <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-      <div className="drawer-content flex flex-col items-center justify-center">
-        <Outlet></Outlet>
+      <div className="drawer-content ">
         <label
           htmlFor="my-drawer-2"
           className="btn btn-primary drawer-button lg:hidden"
         >
           Open drawer
         </label>
+        <Outlet></Outlet>
       </div>
       <div className="drawer-side ">
         <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -52,7 +52,7 @@ const [idAdmin]= useAdmin()
           </li>
 
           <li>
-            <NavLink to="/">
+            <NavLink to="/dashboard/manageItems">
               <FaUtensils></FaUtensils>Manage Items
             </NavLink>
           </li>
