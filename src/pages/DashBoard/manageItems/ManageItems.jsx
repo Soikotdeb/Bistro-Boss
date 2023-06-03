@@ -42,11 +42,10 @@ const ManageItems = () => {
     }
 
     return (
-        <div className="w-full">
+        <div className="w-full lg:mx-14">
             <SectionTitle heading={'Manage All Items'} subHeading={'Hurry Up'}></SectionTitle>
             <div className="overflow-x-auto">
   <table className="table">
-    {/* head */}
     <thead>
       <tr>
         <td>#</td>
