@@ -41,7 +41,7 @@ const [idAdmin]= useAdmin()
        {
         idAdmin ? <>
         <li>
-            <NavLink to="/">
+            <NavLink to="/dashboard/adminHome">
               <FaHome></FaHome> Admin Home
             </NavLink>
           </li>
@@ -57,7 +57,7 @@ const [idAdmin]= useAdmin()
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/booking">
+            <NavLink to="/">
               <FaBookmark></FaBookmark> Manage Bookings
             </NavLink>
           </li>
@@ -68,7 +68,7 @@ const [idAdmin]= useAdmin()
 
         </> : <>
         <li>
-            <NavLink to="/">
+            <NavLink to="/dashboard/userHome">
               <FaHome></FaHome> User Home
             </NavLink>
           </li>
@@ -89,10 +89,10 @@ const [idAdmin]= useAdmin()
             </NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/review">⭐ Add Review</NavLink>
+            <NavLink to="/">⭐ Add Review</NavLink>
           </li>
           <li>
-            <NavLink to="/dashboard/booking">
+            <NavLink to="/">
               <FaBookmark></FaBookmark> My Booking
             </NavLink>
           </li>

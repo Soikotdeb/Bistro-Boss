@@ -4,9 +4,12 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../providers/AuthProvider";
 import carts from "../../../assets/icon/cart.png";
 import useCart from "../../../hooks/UseCart";
+import useAdmin from "../../../hooks/UseAdmin";
 
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  const [isAdmin]=useAdmin();
+
   const [cart]=useCart();
 
 
@@ -25,16 +28,13 @@ const Navbar = () => {
         <Link>CONTACT US</Link>
       </li>
       <li>
-        <Link>DASHBOARD</Link>
+        <Link to={isAdmin? '/dashboard/adminHome' : '/dashboard/userHome'}>DASHBOARD</Link>
       </li>
       <li>
         <Link to="/menu">OUR MENU</Link>
       </li>
       <li>
         <Link to="/orderFood/salad">ORDER FOOD</Link>
-        <li>
-          <Link to="/secret">SECRET</Link>
-        </li>
         <li>
           <Link to="/dashboard/myCart">
             <button className="btn gap-1">
@@ -101,7 +101,7 @@ const Navbar = () => {
               BISTRO <span className="text-orange-600">BOSS</span>
             </a>
 
-            <p className="pl-3">R E S T A U R A N T </p>
+            <p className="pl-3">RESTAURANT </p>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">

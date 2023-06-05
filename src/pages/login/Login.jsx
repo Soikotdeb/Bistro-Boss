@@ -59,8 +59,8 @@ const Login = () => {
       <Helmet>
         <title>Bistro Boss | Sign Up</title>
       </Helmet>
-      <div className="hero min-h-screen bg-base-200">
-        <div className="hero-content flex-col lg:flex-row-reverse">
+       <div className="hero min-h-screen bg-base-200 ">
+        <div className="hero-content flex-col lg:flex-row-reverse ">
           <div className="text-center md:w-1/2 lg:text-left">
             <h1 className="text-5xl font-bold">Login now!</h1>
             <p className="py-6">
@@ -69,8 +69,8 @@ const Login = () => {
               et a id nisi.
             </p>
           </div>
-          <div className="card  md:w-1/2 max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={handleLogin} className="card-body">
+          <div className="card  md:w-1/2 max-w-sm shadow-2xl bg-base-100 ">
+            <form onSubmit={handleLogin} className="card-body py-7  w-full">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
@@ -134,7 +134,7 @@ const Login = () => {
               <div className="p-5"><SocialLogin></SocialLogin></div>
           </div>
         </div>
-      </div>
+      </div> 
     </>
   );
 };
