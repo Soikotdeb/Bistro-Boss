@@ -16,11 +16,14 @@ import ManageItems from "../pages/DashBoard/manageItems/ManageItems";
 import Payment from "../pages/DashBoard/payment/Payment";
 import UserHome from "../pages/DashBoard/userHome/UserHome";
 import AdminHome from "../pages/DashBoard/adminHome/AdminHome";
+import NoFound from "../pages/shared/NoFound/NoFound";
+import UserReview from "../pages/DashBoard/review/UserReview";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement:<NoFound></NoFound>,
     children: [
       {
         path: "/",
@@ -72,6 +75,10 @@ export const router = createBrowserRouter([
       {
         path: "/dashboard/payment",
         element: <Payment></Payment>,
+      },
+      {
+        path:'/dashboard/review',
+        element:<UserReview></UserReview>
       },
 
       //all admin route

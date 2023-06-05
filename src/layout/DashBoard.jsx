@@ -89,7 +89,7 @@ const [idAdmin]= useAdmin()
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">⭐ Add Review</NavLink>
+            <NavLink to="/dashboard/review">⭐ Add Review</NavLink>
           </li>
           <li>
             <NavLink to="/">
