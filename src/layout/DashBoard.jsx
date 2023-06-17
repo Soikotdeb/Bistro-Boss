@@ -73,7 +73,7 @@ const [idAdmin]= useAdmin()
             </NavLink>
           </li>
           <li>
-            <NavLink to="/">
+            <NavLink to="/dashboard/reservation">
               <FaCalendarAlt /> Reservations
             </NavLink>
           </li>
